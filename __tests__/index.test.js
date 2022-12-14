@@ -26,7 +26,7 @@ describe("updateRemoteStudents", () => {
     updateRemoteStudents(inputArray);
     expect(inputArray).not.toBe(copyInputArray);
   });
-  test("inserts 'remote' for each element which does not have a location property", function () {
+  test("inserts 'remote' for each element that do not have a location property", function () {
     let inputArray = [
       { name: "Hypatia", age: 31, location: "leeds" },
       { name: "Ramanujan", age: 22 },
