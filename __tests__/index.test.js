@@ -2,7 +2,7 @@ const updateRemoteStudents = require("../index");
 
 describe("updateRemoteStudents", () => {
   test("returns empty array when not passed array", () => {
-    expect(updateRemoteStudents()).toEqual([]);
+    expect(updateRemoteStudents([])).toEqual([]);
   });
   test("returns a new array", function () {
     let inputArray = [
@@ -24,7 +24,7 @@ describe("updateRemoteStudents", () => {
       { name: "Tao", age: 47, location: "manchester" },
     ];
     updateRemoteStudents(inputArray);
-    expect(inputArray).not.toBe(copyInputArray);
+    expect(inputArray).toEqual(copyInputArray);
   });
   test("inserts 'remote' for each element that do not have a location property", function () {
     let inputArray = [

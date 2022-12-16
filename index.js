@@ -1,12 +1,8 @@
 function updateRemoteStudents(arr) {
-  if (!arr || arr.length < 1) return [];
-  const newArr = arr.map((arr) => {
-    if (!arr.location) {
-      arr.location = "remote";
-    }
-    return arr;
+  return arr.map(({ ...student }) => {
+    if (!student.location) student.location = "remote";
+    return student;
   });
-  return newArr;
 }
 
 module.exports = updateRemoteStudents;
